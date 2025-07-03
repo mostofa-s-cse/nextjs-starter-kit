@@ -326,22 +326,6 @@ The application is fully responsive and works seamlessly across:
 - **Image optimization** with Next.js Image component
 - **Lazy loading** for better initial load times
 
-## 🤝 Contributing
-
-1. **Fork the repository**
-2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
-3. **Commit your changes**: `git commit -m 'Add amazing feature'`
-4. **Push to the branch**: `git push origin feature/amazing-feature`
-5. **Open a Pull Request**
-
-### Development Guidelines
-
-- Follow TypeScript best practices
-- Use meaningful commit messages
-- Write tests for new features
-- Update documentation as needed
-- Ensure all linting passes
-
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
