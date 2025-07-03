@@ -1,6 +1,7 @@
 'use client';
 
 import Counter from '@/components/Counter';
+import DataTable from '@/components/DataTable';
 import { PostList } from '@/components/Post';
 import { apiHelpers, Post } from '@/services/api';
 import {
@@ -13,7 +14,6 @@ import {
   Settings,
   Sparkles,
 } from 'lucide-react';
-import Link from 'next/link';
 import React from 'react';
 
 export default function Home() {
@@ -85,29 +85,36 @@ export default function Home() {
           <div className="w-full">
             <div className="border-b border-gray-200">
               <nav className="flex space-x-8 px-6" aria-label="Tabs">
-                <div className="border-b-2 border-blue-500 py-4 px-1 text-sm font-medium text-blue-600">
+                <button
+                  className="border-b-2 border-blue-500 py-4 px-1 text-sm font-medium text-blue-600"
+                  aria-current="page"
+                >
                   <BarChart3 size={20} className="inline mr-2" />
-                  Data Table Preview
-                </div>
+                  Data Table
+                </button>
+                <button className="border-b-2 border-transparent py-4 px-1 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                  <Calculator size={20} className="inline mr-2" />
+                  Counter
+                </button>
+                <button className="border-b-2 border-transparent py-4 px-1 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                  <FileText size={20} className="inline mr-2" />
+                  Posts
+                </button>
               </nav>
             </div>
 
             <div className="p-6">
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Advanced Data Table
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Features server-side pagination, debounced search,
-                  multi-column sorting, and responsive design. Click &quot;Data
-                  Table&quot; in the navigation to see the full component.
-                </p>
-                <Link
-                  href="/data-table"
-                  className="inline-flex items-center px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-md transition-colors"
-                >
-                  View Full Data Table
-                </Link>
+              <div id="data-table" className="block">
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    Advanced Data Table
+                  </h3>
+                  <p className="text-gray-600">
+                    Features server-side pagination, debounced search,
+                    multi-column sorting, and responsive design.
+                  </p>
+                </div>
+                <DataTable />
               </div>
             </div>
           </div>
